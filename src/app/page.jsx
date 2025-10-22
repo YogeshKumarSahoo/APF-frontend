@@ -230,7 +230,7 @@ export default function BranchCapture() {
 
   const submitData = async () => {
     try {
-      const response = await fetch("http://localhost:3000/api/branches", {
+      const response = await fetch("/api/branches", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
