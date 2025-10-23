@@ -30,15 +30,6 @@ export default defineConfig({
     outDir: 'dist',
     sourcemap: false, // Disable sourcemaps in production for smaller bundle
     minify: 'terser',
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          vendor: ['react', 'react-dom'],
-          router: ['react-router', 'react-router-dom'],
-          ui: ['@chakra-ui/react', '@emotion/react', '@emotion/styled'],
-        },
-      },
-    },
   },
   logLevel: 'info',
   plugins: [

@@ -3,18 +3,10 @@
 	"private": true,
 	"type": "module",
 	"scripts": {
-		"dev": "vite",
-		"dev:integrated": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\" --names \"BACKEND,FRONTEND\" --prefix-colors \"blue,green\"",
-		"dev:backend": "node backend-server.cjs",
-		"dev:frontend": "vite",
-		"build": "npm run build:frontend",
-		"build:frontend": "vite build",
-		"build:netlify": "npm run build:frontend",
-		"preview": "vite preview",
-		"start": "node backend-server.cjs",
-		"lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-		"typecheck": "react-router typegen && tsc --noEmit",
-		"deploy:netlify": "npm run build:netlify && echo 'Build complete! Deploy to Netlify.'"
+		"dev": "npx @react-router/dev dev",
+		"build": "npx @react-router/dev build",
+		"preview": "npx @react-router/dev preview",
+		"start": "npx @react-router/dev dev"
 	},
 	"dependencies": {
 		"@auth/core": "^0.37.2",
@@ -93,6 +85,7 @@
 		"micromatch": "^4.0.8",
 		"postcss": "^8.5.3",
 		"tailwindcss": "3",
+		"terser": "^5.44.0",
 		"typescript": "^5.8.3",
 		"vite": "^6.3.3",
 		"vite-plugin-babel": "^1.3.1",
